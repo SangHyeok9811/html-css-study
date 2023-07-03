@@ -5,115 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>요리 레시피</title>
     <style>
-      * {
-        color: #a3e99d;
-      }
-      #main-name {
-        font-size: 40px;
-        text-align: center;
-        background: linear-gradient(to right, #7c96f3, #000000);
-        margin: 0;
-      }
-      .list-box {
-        margin: 0;
-        display: inline-block;
-        width: 100%;
-        background: linear-gradient(to right, #7c96f3, #000000);
+      :root {
+        --main-color: linear-gradient(to right, #f8efd4, #e9cd7a);
+        --secondary-color: #f1e6c5;
+        --default-font-size: 14px;
       }
 
-      #list {
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* 디폴트 */
+      }
+
+      body {
+        color: #580303;
+        background: var(--main-color);
+        width: 80%;
+        margin: 0 auto;
+        font-size: var(--default-font-size);
+      }
+
+      .main-div {
+        border: 3px solid black;
+        width: 70%;
+        margin: 0 auto;
+        background-color: #e4d19a;
+        border-radius: 30px;
+      }
+
+      .main-div h1 {
         text-align: center;
-        font-size: 20px;
+      }
+
+      .list {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
 
       .list-subject {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: calc(10% + 10px);
-        margin-right: calc(10% + 10px);
+        margin: 25px 5% 10px 5%;
       }
-      .table-set {
-        background-color: #323e3d;
+      .list-subject li {
+        list-style: none;
       }
-      #ramen-section {
-        background: linear-gradient(to right, #7c96f3, #000000);
-        display: inline-block;
-        width: 100%;
+      .list-subject li::before {
+        content: "✔";
+        color: orange;
       }
-      #ramen {
-        font-size: 30px;
-      }
-      #dongpayuk-section {
-        background: linear-gradient(to right, #7c96f3, #000000);
-        display: inline-block;
-        width: 100%;
-      }
-      #dongpayuk {
-        font-size: 30px;
-      }
-      #tang-section {
-        background: linear-gradient(to right, #7c96f3, #000000);
-        display: inline-block;
-        width: 100%;
-      }
-      #tang {
-        font-size: 30px;
-      }
-      #menu {
-        background: linear-gradient(to right, #7c96f3, #000000);
-        display: inline-block;
-        width: 100%;
-      }
-      body > footer {
-        background: linear-gradient(to right, #7c96f3, #000000);
-        display: inline-block;
-        width: 100%;
-      }
-      .menu-list {
-        justify-content: space-between;
+      .image{
         text-align: center;
       }
+      .ramen-section {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+      .ramen-object{
+        text-align: center;
+        margin-bottom:30px;
+      }
+      .dongpayuk-section {
+        width:80%;
+        margin:0 auto;
+        margin-top: 100px;
+      }
+     .dongpayuk-object{
+      text-align:center;
+      margin-bottom:30px;
+     }
+     .tang-section{
+      width:80%;
+      margin:0 auto;
+      margin-top:100px;
+     }
+     .tang-object{
+      text-align: center;
+      margin-bottom:30px;
+     }
+     .table-set{
+        border: 1px solid black;
+        width:500px;
+        border: 1px solid;
+        margin: 0 auto;
+      }
+      
     </style>
   </head>
-  <h1 id="main-name">
-    <br />
-    내가 좋아하는 요리 레시피
-    <br />
-    <br />
-  </h1>
+  <br />
+  <div class="main-div"><h1>내가 좋아하는 요리 레시피</h1></div>
+  <br />
   <body>
     <div class="list-box">
       <hr />
-      <h3 id="list">목록</h3>
+      <h3 class="list">목록</h3>
       <ul class="list-subject">
         <li>
-          <em>라면</em>
+          <em><a href="#ramen">라면</a></em>
         </li>
         <li>
-          <em>동파육</em>
+          <em><a href="#dongpayuk">동파육</a></em>
         </li>
         <li>
-          <em>닭볶음탕</em>
+          <em><a href="#tang">닭볶음탕</a></em>
         </li>
       </ul>
-      <br />
     </div>
-    <section id="ramen-section">
-      <hr />
-      <h3 title="라면 레시피">
+    <section class="ramen-section">
+      <div></div>
+      <h3 title="라면 레시피" class="ramen-object" >
         <a
           href="https://m.10000recipe.com/recipe/6888740#obx_recipe_step_start"
           target="_blank"
           id="ramen"
-          class="bold1"
           >라면</a
         >
       </h3>
-      <img src="img/ramen.jpg" alt="라면" width="300" title="라면" />
+      <div class="image">
+      <img src="img/ramen.jpg" alt="라면" width="500px" title="라면"/>
+      </div>
       <br />
-      <h3>준비 재료</h3>
-      <table border="3" width="500" class="table-set">
+      <h3 class="ramen-object" >준비 재료</h3>
+      <table class="table-set">
         <thead>
           <th>재료</th>
           <th>용량</th>
@@ -142,39 +159,40 @@
         </tbody>
       </table>
       <br />
-      <h3>조리 방법</h3>
-      <p>
+      <h3 class="ramen-object">조리 방법</h3>
+      <p class ="ramen-object">
         대파.콩나물.김치썰어준비. <br />
         콩나물한번 씻어주고 대파 4cm 채썰어둡니다. <br />
         냄비에 물500ml붓고 스프넣고 김치부터 넣어줍니다. <br />그후 콩나물 넣고
         라면을 넣고 집게로 면을 치대면서 끓입니다. <br />
         고추가루 한수저준비. <br />
-        고추가루 한수저넣고 면이 익으면 불끄고 그릇에 담은후 달걀노른자 넣고
+        고추가루 한수저넣고 면이 익으면 불끄고 그릇에 담은후 <br>달걀노른자 넣고
         파채올리고 통깨뿌려주세요.
         <br />
         <br />
       </p>
+    </div>
     </section>
-    <section id="dongpayuk-section">
-      <hr />
-      <h3>
+    <section class="dongpayuk-section">
+      <h3 class="dongpayuk-object">
         <a
           href="https://www.10000recipe.com/recipe/693694#stepDiv1"
           target="_blank"
           id="dongpayuk"
-          class="bold1"
           >동파육</a
         >
       </h3>
+      <div class="image">
       <img
         src="https://cdn.imweb.me/upload/S201812245c2088d5a1502/ba1b9e3d30136.jpg"
         alt="동파육"
-        width="300"
+        width="500"
         title="동파육"
       />
+    </div>
       <br />
-      <h3>준비 재료</h3>
-      <table border="3" width="500" class="table-set">
+      <h3 class="dongpayuk-object">준비 재료</h3>
+      <table class="table-set">
         <thead>
           <th><strong>재료</strong></th>
           <th><em>용량</em></th>
@@ -223,35 +241,34 @@
         </tbody>
       </table>
       <br />
-      <h3>조리 방법</h3>
-      <p>
+      <h3 class="dongpayuk-object">조리 방법</h3>
+      <p class="dongpayuk-object">
         통삼겹살 1근=600g은 찬물에 30분정도 담궈 핏물을 빼고 <br />
-        냄비에 핏물 뺀 통삼겹살, 양파, 파뿌리, 통마늘, 월계수잎, 통후추를 넣고
-        잠길만큼의 물을 부은 후 센불에 30분간 끓이고, 월계수잎이 없으면 집에
+        냄비에 핏물 뺀 통삼겹살, 양파, 파뿌리, 통마늘, 월계수잎, 통후추를 넣고 <br />
+        잠길만큼의 물을 부은 후 센불에 30분간 끓이고, <br />월계수잎이 없으면 집에
         있는 허브나 향신료를 넣어주셔도 좋아요. <br />
-        고기가 익을동안 진간장 1컵, 굴소스 1큰술, 설탕 6큰술, 맛술 1/2컵,
-        인스턴트 커피 1큰술을 섞어서 조림장을 만들고, 간장은 꼭! 진간장으로
+        고기가 익을동안 진간장 1컵, 굴소스 1큰술, 설탕 6큰술, 맛술 1/2컵, <br />
+        인스턴트 커피 1큰술을 섞어서 조림장을 만들고, 간장은 꼭! <br /> 진간장으로
         넣어주세요. 혹 국간장으로 하시는분들 안됩니다. 완전 짜요. <br />
-        30분 후 익은 고기만 건져내시고 다른것들은 다 버리세요. 혹 이 물에
-        조림장을 넣어서 조리시는분들도 계시는데 돼지기름은 몸에 안좋답니다.
-        과감하게 버려주세요~ 단지 고기에 잡내를 없애기 위해 갖가지 향신료를
+        30분 후 익은 고기만 건져내시고 다른것들은 다 버리세요. <br /> 혹 이 물에
+        조림장을 넣어서 조리시는분들도 계시는데  <br /> 돼지기름은 몸에 안좋답니다.
+        과감하게 버려주세요~ <br />단지 고기에 잡내를 없애기 위해 갖가지 향신료를
         넣어서 끓인 것 뿐이에요. <br />
         다른 냄비에 물 3컵과 조림장을 붓고, 고기를 넣어 물이 반쯤 졸아들때까지
-        끓여줍니다. 약 센불에서 30분정도 끓여주시면 되요. 혹 넘칠 수 있으니
+        끓여줍니다. <br /> 약 센불에서 30분정도 끓여주시면 되요. 혹 넘칠 수 있으니
         옆에서 봐가며 끓여주세요. <br />
         그리고 고기를 건져서 먹기좋게 썰어줍시다. <br />
         그리고 다시 조림장에 넣어서 살짝 더 졸여줍시다. 약 센불에서 5분정도
         끓여주시면 되요. <br />
-        접시에 대파채를 올리고, 청경채는 끓는물에 살짝 데친 후 올려줍니다.
+        접시에 대파채를 올리고, 청경채는 끓는물에 살짝 데친 후 올려줍니다.<br />
         청경채가 없다면 대파채만 있어도 되요. <br />
         그 위에 조린 고기를 나란히 올려서 마무리.
         <br />
         <br />
       </p>
     </section>
-    <section id="tang-section">
-      <hr />
-      <h3>
+    <section class="tang-section">
+      <h3 class="tang-object">
         <a
           href="https://m.10000recipe.com/recipe/6623046#obx_recipe_step_start"
           target="_blank"
@@ -259,15 +276,17 @@
           >닭볶음탕</a
         >
       </h3>
+      <div class="image">
       <img
         src="https://mblogthumb-phinf.pstatic.net/MjAxNjExMDRfMzAg/MDAxNDc4MjY3MzY3OTYw.lft7Srza7PPivbVEh3IR6pKNqActzUnTmTeNToMSg-Ag.X8aI5BOwKhNjZz1uw_g4Yy7CIgfwmrBexSOMcgpoZ2Mg.JPEG.pinkim071/image_2657610401478267068433.jpg?type=w800"
         alt="닭볶음탕"
-        width="300"
+        width="500"
         title="닭볶음탕"
       />
+    </div>
       <br />
-      <h3>준비 재료</h3>
-      <table border="3" width="500" class="table-set">
+      <h3 class="tang-object">준비 재료</h3>
+      <table class="table-set">
         <thead>
           <th><strong>재료</strong></th>
           <th><em>용량</em></th>
@@ -318,26 +337,25 @@
         </tbody>
       </table>
       <br />
-      <h3>조리 방법</h3>
-      <p>
-        닭은 껍데기에 지방이 거의 다 붙어있기때문에 지방 섭취하기가
+      <h3 class="tang-object">조리 방법</h3>
+      <p class="tang-object">
+        닭은 껍데기에 지방이 거의 다 붙어있기때문에 <br /> 지방 섭취하기가
         꺼려지는분들은 미리 닭껍질을 손질해서 준비해주세요. <br />
-        손질된닭이 푹 잠길만큼 우유를 부어주어요. 숙성과 잡내를 제거하기
+        손질된닭이 푹 잠길만큼 우유를 부어주어요.<br /> 숙성과 잡내를 제거하기
         위함이에요 <br />
-        30분후 물에 여러번 헹궈내고, 닭이 잠길만큼의 물을 부어 설탕3큰술을
+        30분후 물에 여러번 헹궈내고, <br />닭이 잠길만큼의 물을 부어 설탕3큰술을
         함께넣고 끓여주어요. <br />
         닭이 끓는동안 야채를 손질해야겠죠 <br />
-        감자는 큼지막하게 썰고, 양파,버섯,당근은 먹기좋게 그리고 대파와
+        감자는 큼지막하게 썰고, 양파,버섯,당근은 먹기좋게  <br />그리고 대파와
         청양고추는 어슷썰어 준비해주세요. <br />
-        물이 끓기시작하면 불순물이 하나둘 떠오르기 시작하는데요, 수저를 이용해서
+        물이 끓기시작하면 불순물이 하나둘 떠오르기 시작하는데요,<br /> 수저를 이용해서
         거품을 걷어내주시면 되어요. <br />
         오래 익혀야하는 감자를 제일 먼저 넣어주고, 다진마늘2큰술도 넣어주세요.
         <br />
-        양파도 넣어줍니다. <br />
-        당근도 넣어줍니다. <br />
+        양파도 넣어줍니다. 당근도 넣어줍니다. <br />
         국물이 끓어오르면 진간장 1국자반을 넣고 고춧가루도 1국자 넣어줍니다.
         <br />
-        고추가루가 풀어질때쯤 버섯도 추가 마지막으로 파와 청양고추를 넣고 한소큼
+        고추가루가 풀어질때쯤 버섯도 추가 <br />마지막으로 파와 청양고추를 넣고 한소큼
         팍 끓여내면 완성.
         <br />
         <br />
