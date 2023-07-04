@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 100px;
+        border: 3px solid black;
+      }
+      p:nth-of-type(1) {
+        /* 컨텐츠 요소크기가 밖으로 나가는 경우 */
+        /* overflow: hidden 숨김 */
+        overflow: hidden;
+      }
+      p:nth-of-type(2) {
+        overflow: scroll;
+        /* x,y축 스크롤 둘다 생김 */
+      }
+      p:nth-of-type(3) {
+        overflow-y: scroll;
+        /* y축 스크롤 무조건 생김 글자가 넘치지 않더라도 */
+      }
+      p:nth-child(4) {
+        overflow-y: auto;
+      }
+      p:nth-child(5) {
+        /* 옆으로 넘어가는 영역이 있어야만 x축 스크롤이 생김 */
+        overflow-x: auto;
+        /* white-space:nowrpa; */
+        /* 기본: 빈 공간을 아래로 내림 */
+        /* 텍스트 컨텐트를 아래로 안내림 */
+        white-space: nowrap;
+        /* text-overflow: ellipsis; */
+        /* 넘어간는 영역을 ... 처리해주는 거 */
+        /* text-overflow: ellipsis; */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis
+      ratione at ut magnam perferendis. Pariatur nemo tenetur libero aut
+      suscipit at et maxime, in voluptate dolores magni quisquam sit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis
+      ratione at ut magnam perferendis. Pariatur nemo tenetur libero aut
+      suscipit at et maxime, in voluptate dolores magni quisquam sit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis
+      ratione at ut magnam perferendis. Pariatur nemo tenetur libero aut
+      suscipit at et maxime, in voluptate dolores magni quisquam sit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis
+      ratione at ut magnam perferendis. Pariatur nemo tenetur libero aut
+      suscipit at et maxime, in voluptate dolores magni quisquam sit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, omnis
+      ratione at ut magnam perferendis. Pariatur nemo tenetur libero aut
+      suscipit at et maxime, in voluptate dolores magni quisquam sit!
+    </p>
+  </body>
+</html>
