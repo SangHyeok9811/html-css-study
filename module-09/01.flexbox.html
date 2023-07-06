@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        /* flexbox로 선언이되고 */
+        /* display:flex로 되어있는 요소 */
+        /* flex 컨테이너 */
+        /* flex 컨테이너 자식 요소를 */
+        /* flex 아이템 */
+        display: flex;
+        border: 1px solid red;
+        padding: 10px;
+
+        /* 기본적으로 아이템을 행으로 배치 */
+        /* flex-direction: row; */
+      }
+      .item {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+      .row-reverse {
+        /* 끝지점부터 아이템을 배치 */
+        flex-direction: row-reverse;
+      }
+      .col {
+        /* flex-direction 속성으로 지정하는 방향 */
+        /* 주측(amin axis) */
+        /* 반대방향이 axis(교차축) */
+        flex-direction: column;
+      }
+      .col-reverse {
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flex box는 아이테만 공간 분배
+  및 정렬 등의 기능을 제공 -->
+    <!--  1차원 레이아웃 모델 -->
+    <!-- 행 또는 열만 처리함 -->
+    <!-- inline과 비슷하지만 크기지정이 다름. -->
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <span class="item">이름</span>
+    </div>
+    <div class="container row-reverse">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <span class="item">이름</span>
+    </div>
+    <div class="container col">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <span class="item">이름</span>
+    </div>
+    <div class="container col-reverse">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <span class="item">이름</span>
+    </div>
+  </body>
+</html>

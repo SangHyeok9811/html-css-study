@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 50px;
+        height: 100px;
+        width: 100px;
+        background-color: green;
+
+        /* transition: s/ms */
+        /* transition-duration: 지속시간 */
+        transition: 0.5s 0.1s cubic-bezier(0, 0.8, 1, 1);
+        /* transition-duration: 1s; */
+        /* transition: 지속시간 timing-funtion */
+        transition-timing-function: ease-in-out;
+      }
+      div:hover {
+        /* width: 150px;
+        height: 150px; */
+        /* transform: 변형시킬함수(값) */
+        /* scale(배수값-실수) */
+        /* 가속도랑  */
+        /* transform: scale(1.5); */
+
+        /* transform 기본 위치 변경  */
+        /* 기본이 center */
+        /* transform-origin: left top; */
+        /* transform: translatex(100px) rotate(90deg) skew(30deg); */
+        transform: rotateY(90deg);
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 트랜지션(transition) 속성 값의 변화가 있을 때 중간 과정을 표현-->
+    <!-- 속성값은 숫자이거나 숫자로 표현(변환)할 수 있는 경우 (16진수색표시/ 크기값 등) -->
+  </body>
+  <div></div>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit commodi
+    repellendus reiciendis similique quod dolore consequuntur dolores eos
+    debitis. Nesciunt itaque facilis doloribus mollitia debitis accusantium
+    harum nemo quibusdam quas.
+  </p>
+</html>

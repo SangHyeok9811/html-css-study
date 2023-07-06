@@ -18,32 +18,47 @@
         box-sizing: border-box;
         /* 디폴트 */
       }
+      html {
+        background-image: url("../img/kitchen2.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+      }
       body {
         color: #580303;
         width: 70%;
         margin: 0 auto;
-        background: linear-gradient(to right, #f8efd4, #e9cd7a);
+        /* background: linear-gradient(to right, #f8efd4, #e9cd7a); */
         font-family: "KOTRAHOPE";
       }
 
       .top {
-        border: 5px solid #580303;
+        border: 7px solid #580303;
         width: 90%;
         margin: 0 auto;
         border-radius: 30px;
         margin-top: 5%;
+        background: linear-gradient(to right, #f8efd4, #e9cd7a);
       }
 
       .main-div h1 {
+        color: #805106;
         text-align: center;
-        font-size: 3rem;
+        font-size: 5rem;
         padding: 3%;
       }
 
       .list {
         text-align: center;
-        margin-top: 5%;
-        font-size: 2rem;
+        font-size: 4rem;
+        width: 20%;
+        margin: 5% auto 0;
+        border: 3px solid #580303;
+        border-radius: 15px;
+        background: #e9cd7a;
+        color: #874804;
       }
 
       .list-subject {
@@ -55,7 +70,21 @@
 
       .list-subject li {
         list-style: none;
-        font-size: 1.5rem;
+        width: 20%;
+        border: 3px solid #580303;
+        padding: 2%;
+        border-radius: 15px;
+        background-color: #f8efd4;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 3%;
+      }
+
+      .list-subject a {
+        font-size: 2rem;
+        margin: 0 auto;
       }
 
       .list-subject li:nth-of-type(1)::before {
@@ -75,6 +104,7 @@
       .name-tag {
         text-decoration: none;
         color: #ce0505;
+        font-size: 4rem;
       }
       .name-tag:visited {
         color: #580303;
@@ -88,7 +118,8 @@
       }
       .hidden-area {
         font-weight: 900;
-        font-size: 0.1rem;
+        font-size: 0.7rem;
+        padding: 1%;
         border: 1px solid brown;
         width: fit-content;
         margin: 3% auto;
@@ -100,7 +131,9 @@
       .ramen-section {
         margin: 0 auto;
         margin-top: 10%;
-        background-color: #fad7b9;
+        background: linear-gradient(to right, #f8efd4, #e9cd7a);
+        border-radius: 0px 35px;
+        font-size: 1.2rem;
       }
       .ramen-object {
         text-align: center;
@@ -110,7 +143,9 @@
       .dongpayuk-section {
         margin: 0 auto;
         margin-top: 10%;
-        background-color: #f8be8c;
+        background: linear-gradient(to right, #f8efd4, #e9cd7a);
+        border-radius: 0px 35px;
+        font-size: 1.2rem;
       }
       .dongpayuk-object {
         text-align: center;
@@ -119,7 +154,9 @@
       .tang-section {
         margin: 0 auto;
         margin-top: 10%;
-        background-color: #f8a55b;
+        background: linear-gradient(to right, #f8efd4, #e9cd7a);
+        border-radius: 0px 35px;
+        font-size: 1.2rem;
       }
       .tang-object {
         text-align: center;
@@ -156,27 +193,27 @@
       }
     </style>
   </head>
-  <div class="top">
-    <br />
-    <div class="main-div" id="start"><h1>내가 좋아하는 요리 레시피</h1></div>
-    <br />
-  </div>
   <body>
-    <div class="list-box">
-      <h3 class="list">목록</h3>
+    <div class="top">
+      <br />
+      <div class="main-div" id="start"><h1>내가 좋아하는 요리 레시피</h1></div>
+      <br />
+    </div>
+    <p class="list">목록</p>
+    <nav class="sticky">
       <ul class="list-subject">
         <li>
-          <em><a href="#ramen" title="라면챕터로 이동~">라면</a></em>
+          <a href="#ramen" title="라면챕터로 이동~"><em>라면</em></a>
         </li>
         <li>
-          <em><a href="#dongpayuk" title="동파육챕터로 이동~">동파육</a></em>
+          <a href="#dongpayuk" title="동파육챕터로 이동~"><em>동파육</em></a>
         </li>
         <li>
-          <em><a href="#tang" title="닭볶음탕챕터로 이동~">닭볶음탕</a></em>
+          <a href="#tang" title="닭볶음탕챕터로 이동~"><em>닭볶음탕</em></a>
         </li>
       </ul>
-      <hr />
-    </div>
+    </nav>
+    <hr />
     <section class="ramen-section">
       <div class="name-link">
         <a
@@ -432,7 +469,7 @@
       <a href="#ramen">라면</a> &nbsp;&nbsp;
       <a href="#dongpayuk">동파육</a> &nbsp;&nbsp;
       <a href="#tang">닭볶음탕</a>
-      <a href="#start">맨 위</a>
+      <a href="#start">top</a>
     </nav>
     <footer>
       <hr />
